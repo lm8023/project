@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+a,li{
+    text-decoration: none;
+    list-style-type: none;
+}
+@font-face {
+    font-family: 'iconfont';  /* project id 613961 */
+    src: url('//at.alicdn.com/t/font_613961_qnlkyiv5qcgtlnmi.eot');
+    src: url('//at.alicdn.com/t/font_613961_qnlkyiv5qcgtlnmi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_613961_qnlkyiv5qcgtlnmi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_613961_qnlkyiv5qcgtlnmi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_613961_qnlkyiv5qcgtlnmi.svg#iconfont') format('svg');
+}
+.head{
+    width: 100%;
+    height: 140px;
+}
+.nav{
+    background-color: white;
+}
+.head_top{
+    width: 100%;
+    height: 40px;
+    background-color: #363636;
+}
+.fl
+{
+    float: left;
+}
+.fr{
+    float:right;
+}
+.fl a:visited,.fr a:visited{
+    color:#AAAAAA ;
+}
+.head_content{
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    color: #AAAAAA;
+    line-height: 40px;
+    font-size: 14px;
+}
+.fl a:link{
+    color: #AAAAAA;
+}
+.fr a{
+    display: inline-block;
+    width: 105px;
+    height: 40px;
+    background-color: #444;
+    text-align: center;
+}
+.head_bottom{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+.logo{
+    height: 100px;
+    width: 230px;
+    background-image: url("../image/logo_liumeng.png");
+}
+.menu li{
+    float: left;
+    width: 90px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+.menu li a:link{
+    color: black;
+}
+.menu li a:visited{
+    color: black;
+}
+.menu li a:hover{
+    color: #FF6700;
+}
+.serach_box{
+    width: 186px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 0;
+    position: relative;
+}
+.serach_box input{
+    height:39px;
+}
+.serach_box input:nth-child(1){
+    width: 210px;
+    padding-left:30px;
+    box-sizing: border-box;
+}
+.serach_box input:nth-child(2){
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    background-color: #505455;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+.posi{
+    position: absolute;
+    top: -53px;
+    left: 2px;
+    font-size: 25px;
+}

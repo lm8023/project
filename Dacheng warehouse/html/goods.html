@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>商品</title>
+    <link rel="stylesheet" href="../css/goods.css">
+    <embed src="head.html" width="100%" height="140">
+</head>
+<body>
+<section class="goods_info"></section>
+<script>
+    var xmlhttp;//全局的对象的变量
+    if(window.XMLHttpRequest) {//判断浏览器的兼容性
+        xmlhttp=new XMLHttpRequest();//new 对象，针对高版本
+    }else{
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");//IE6,IE5
+    }
+    xmlhttp.open('GET','../php/goods.php',true);//请求的方式 请求的URL  异步(true)或者同步(false)
+    xmlhttp.send();//向服务器发送请求
+    xmlhttp.onreadystatechange=function () {//响应事件
+        if(xmlhttp.readyState==4 &&xmlhttp.status==200){//响应状态
+            var json=JSON.parse(xmlhttp.responseText);//响应数据
+            var str="";
+            for(var i=0;i<json.length;i++) {//拼接数据
+                if(json[i].classID==window.localStorage.Id)
+                {
+                    var src=json[i].img.split(",");
+                    str += "<li class='commodity'><div class='img'><img src='../image/"+src[0]+"'></div>" +
+                            "<p>"+json[i].name+"</p>"+
+                            "<div class='price'><span class='shop_price'>"+"&yen;"+json[i].shop_price+"元"+"</span><span class='id'>"+json[i].id+"</span><a onclick='GetID(this)' href='goodsInfo.html'>立即购买</a></div>"+
+                    "</li>";
+                }
+            }
+            document.querySelector('.goods_info').innerHTML=str;
+        }
+    }
+    function GetID(th){
+        var id=th.parentNode.childNodes[1].innerHTML;
+        if(window.localStorage.goodsID)
+            window.localStorage.goodsID=id;
+        else
+            window.localStorage.goodsID=id;
+        console.log( window.localStorage.goodsID);
+    }
+</script>
+<embed src="footer.html" width="100%" height="160">
+</body>
+</html>

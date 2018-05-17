@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a,li{
+    text-decoration: none;
+    list-style: none;
+}
+#box{
+    width: 1200px;
+    height: 600px;
+    background-color: #f1f1f1;
+    margin: 0 auto;
+}
+.box{
+    width: 400px;
+    height: 400px;
+   margin: 0 auto;
+    background-color: white;
+}
+.logo{
+    height: 200px;
+}
+.name,.pwd{
+    height: 25px;
+}
+.Z_size{
+    font-size: 20px;
+    text-align: right;
+}
+table,tr{
+    width: 100%;
+}
+.login{
+    height: 70px;
+}
+.info{
+    height: 35px;
+}
+.sub{
+    width:100px ;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: #FF5C26;
+    color:white;
+}
+.reg{
+    width: 139px;
+}

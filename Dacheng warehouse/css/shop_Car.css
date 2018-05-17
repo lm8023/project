@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+table{
+    width: 1200px;
+    margin: 0 auto;
+}
+table,table tr th, table tr td { border:1px solid #DDDDDD; }
+table { width: 1200px; min-height: 25px; line-height: 25px; text-align: center; border-collapse: collapse;margin: 0 auto}
+.id{
+    color: white;
+}
+p{
+    width: 1200px;
+    margin: 0 auto;
+    height: 40px;
+    text-align: right;
+}
